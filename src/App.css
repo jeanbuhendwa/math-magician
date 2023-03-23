@@ -1,5 +1,10 @@
+.App {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 40px 160px;
+}
+
 .calcContainer {
-  margin: 2% auto;
   width: 300px;
   border: 1px solid black;
   border-radius: 5px;
