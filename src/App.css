@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin:40px 160px;
+  margin: 40px 160px;
 }
 
 .calcContainer {
