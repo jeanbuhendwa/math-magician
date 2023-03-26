@@ -30,6 +30,9 @@
   height: 50px;
   border: 1px solid gray;
   margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(41, 41, 41);
 }
 
 .inputContainer button:nth-child(4),
