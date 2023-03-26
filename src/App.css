@@ -6,7 +6,7 @@
 
 .calcContainer {
   width: 300px;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 5px;
   padding: 0;
   display: flex;
@@ -19,6 +19,7 @@
   text-align: right;
   padding: 0 20px;
   color: #fff;
+  border-radius: 5px 5px 0 0;
 }
 
 .inputContainer {
