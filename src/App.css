@@ -35,6 +35,10 @@
   color: rgb(41, 41, 41);
 }
 
+.inputContainer button:hover {
+  background-color: rgb(170, 170, 170);
+}
+
 .inputContainer button:nth-child(4),
 .inputContainer button:nth-child(8),
 .inputContainer button:nth-child(12),
