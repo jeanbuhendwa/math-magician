@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import calculate from '../logic/calculate';
+import CalcBg from '../assets/calculate.svg';
 
 const Calculator = () => {
   const [state, setState] = useState({
@@ -37,24 +38,29 @@ const Calculator = () => {
 
   return (
     <>
-      <section className="calcContainer">
-        <div className="displayContainer">
-          <h2>{state.next || state.total || '0'}</h2>
-        </div>
-        <div className="inputContainer">
-          {inputSign.map((sign) => (
-            <button
-              type="button"
-              key={sign}
-              onClick={() => {
-                handleClick(sign);
-              }}
-            >
-              {sign}
-            </button>
-          ))}
-        </div>
-      </section>
+      <main className="mainCalcContainer">
+        <section className="imgCalc">
+          <img src={CalcBg} alt="Calculate Backgroung" />
+        </section>
+        <section className="calcContainer">
+          <div className="displayContainer">
+            <h2>{state.next || state.total || '0'}</h2>
+          </div>
+          <div className="inputContainer">
+            {inputSign.map((sign) => (
+              <button
+                type="button"
+                key={sign}
+                onClick={() => {
+                  handleClick(sign);
+                }}
+              >
+                {sign}
+              </button>
+            ))}
+          </div>
+        </section>
+      </main>
     </>
   );
 };
