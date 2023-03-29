@@ -1,24 +1,141 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f2e8df;
+}
+
+.navBar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 10px -2px gray;
+}
+
+.navBar .logo {
+  margin-left: 200px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -4px;
+  color: #86a69d;
+}
+
+.logoSpan {
+  color: #f2b263;
+  font-weight: 500;
+}
+
+.navBar ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin-right: 200px;
+}
+
+a {
+  color: #506861;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Active route */
+.active {
+  color: #f2b263;
+  border-bottom: 2px solid #506861;
+  padding: 0 0 6px;
+}
+
+.mainQuoteContainer,
+.mainCalcContainer,
+.HomeContainer {
   display: grid;
-  grid-template-columns: 50% 50%;
-  margin: 40px 160px;
+  grid-template-columns: 50% 45%;
+  gap: 50px;
+  padding: 50px 200px;
+}
+
+.mainQuoteContainer,
+.mainCalcContainer {
+  grid-template-columns: 40% 50%;
+  padding-top: 120px;
+  gap: 10%;
+}
+
+.mainQuoteContainer {
+  padding-top: 50px;
+}
+
+.aboutHome {
+  padding: 30px 0 20px;
+}
+
+.aboutHome p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: start;
+  color: #31423e;
+}
+
+.aboutHome h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #db9641;
+  border-bottom: 2px solid #242f2c;
+  width: 130px;
+  padding: 0 0 5px;
+}
+
+.aboutHome ul {
+  margin-left: 50px;
+  list-style: square;
+  font-size: 18px;
+  color: #455e57;
+}
+
+.quoteBg img,
+.imgCalc img,
+.imgHome img {
+  width: 100%;
+  transition: 0.3s all ease-in-out;
+}
+
+.errorLoading img,
+.quoteLoading img {
+  width: 100%;
+}
+
+.imgHome img:hover {
+  width: 105%;
 }
 
 .calcContainer {
-  width: 300px;
+  width: 100%;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 0 15px gray;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
 }
 
 .displayContainer {
   background: rgb(112, 112, 112);
   text-align: right;
-  padding: 0 20px;
+  padding: 20px;
   color: #fff;
   border-radius: 5px 5px 0 0;
 }
@@ -26,19 +143,37 @@
 .inputContainer {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.quoteBg {
+  text-align: center;
 }
 
 .inputContainer button {
-  height: 50px;
+  height: 100%;
   border: 1px solid gray;
   margin: 0;
   font-size: 18px;
   font-weight: 600;
   color: rgb(41, 41, 41);
+  transition: 0.3s all ease-in-out;
+}
+
+.quoteBg button {
+  border: none;
+  padding: 10px 15px;
+  background: #86a69d;
+  color: #f2e8df;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
 }
 
 .inputContainer button:hover {
-  background-color: rgb(170, 170, 170);
+  background-color: #86a69d;
 }
 
 .inputContainer button:nth-child(4),
@@ -46,9 +181,47 @@
 .inputContainer button:nth-child(12),
 .inputContainer button:nth-child(16),
 .inputContainer button:nth-child(19) {
-  background: orange;
+  background: #f2b263;
 }
 
 .inputContainer button:nth-child(17) {
   grid-column-start: span 2;
+}
+
+.quoteText {
+  padding-top: 120px;
+}
+
+.quoteText p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #394f4a;
+  margin-bottom: 20px;
+}
+
+.quoteText h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #eb7474;
+}
+
+.quoteBg button:hover {
+  background: #3f554f;
+}
+
+.errorLoading,
+.quoteLoading {
+  margin: 50px auto;
+  width: 300px;
+}
+
+.errorLoading p,
+.quoteLoading p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #eb7474;
+  text-align: center;
 }
