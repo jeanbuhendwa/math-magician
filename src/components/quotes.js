@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import QuoteBg from '../assets/quote-bg.svg';
+import LoadingBg from '../assets/loading-bg.svg';
+import ErrorBg from '../assets/error-bg.svg';
 
 const RandomQuote = () => {
   const [quote, setQuote] = useState([]);
@@ -28,18 +31,44 @@ const RandomQuote = () => {
     fetchData();
   }, [setQuote, setIsLoading]);
 
-  if (isLoading) return <p>Quote Loading... please wait.</p>;
-  if (hasError) return <div>Sorry something went wrong</div>;
+  if (isLoading) {
+    return (
+      <>
+        <div className="quoteLoading">
+          <img src={LoadingBg} alt="Loading Background" />
+          <p>Quote Loading...</p>
+        </div>
+      </>
+    );
+  }
+  if (hasError) {
+    return (
+      <>
+        <div className="errorLoading">
+          <img src={ErrorBg} alt="Error Background" />
+          <p>Sorry something went wrong</p>
+        </div>
+      </>
+    );
+  }
 
   return (
-    <div>
-      {quote.map((data) => (
-        <>
-          <p key={quote.indexOf(data)}>{data.quote}</p>
-          <h3>{data.author}</h3>
-        </>
-      ))}
-    </div>
+    <>
+      <main className="mainQuoteContainer">
+        <section className="quoteBg">
+          <img src={QuoteBg} alt="Quote Background" />
+          <button type="button">Get New Quote</button>
+        </section>
+        <section className="quoteText">
+          {quote.map((data) => (
+            <>
+              <p key={quote.indexOf(data)}>{data.quote}</p>
+              <h3>{data.author}</h3>
+            </>
+          ))}
+        </section>
+      </main>
+    </>
   );
 };
 
