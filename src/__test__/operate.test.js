@@ -1,4 +1,5 @@
 import operate from '../logic/operate';
+
 describe('operate', () => {
   it('should return the correct result for addition', () => {
     expect(operate('1', '2', '+')).toEqual('3');

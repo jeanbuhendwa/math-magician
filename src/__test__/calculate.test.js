@@ -1,5 +1,6 @@
 import calculate from '../logic/calculate';
 import operate from '../logic/operate';
+
 describe('calculate', () => {
   it('should handle AC button', () => {
     const obj = {
@@ -66,4 +67,4 @@ describe('calculate', () => {
       operation: '-',
     });
   });
-})
+});
