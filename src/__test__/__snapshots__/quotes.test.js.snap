@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RandomQuote component should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="quoteLoading"
+  >
+    <img
+      alt="Loading Background"
+      src="loading-bg.svg"
+    />
+    <p>
+      Quote Loading...
+    </p>
+  </div>
+</DocumentFragment>
+`;
